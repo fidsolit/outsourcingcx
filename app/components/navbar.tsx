@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
       {/* Logo */}
       <div className="text-2xl font-bold">
         <Link href="/" className="hover:text-blue-400 transition-colors">
-          MyLogo
+          Outsourcingcx
         </Link>
       </div>
 
