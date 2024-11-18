@@ -24,7 +24,7 @@ export default function Home() {
           Enhance customer satisfaction with professional, outsourced CX
           services tailored to your business needs.
         </motion.p>
-        <Link href="/contact">
+        <Link href="/contactus">
           <motion.button
             className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
             whileHover={{ scale: 1.05 }}
@@ -78,9 +78,9 @@ export default function Home() {
         >
           Ready to Enhance Your Customer Experience?
         </motion.h2>
-        <Link href="/contact">
+        <Link href="/contactus">
           <motion.button
-            className="px-8 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
+            className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-green-700 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
