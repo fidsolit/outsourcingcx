@@ -1,9 +1,9 @@
-// File: components/FancyNavbar.tsx
 "use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import OutsourcingCXIcon from "./outsourcingicon";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,49 +17,25 @@ const Navbar: React.FC = () => {
     },
   };
 
-  const topLineVariants = {
-    open: {
-      rotate: 45,
-      y: 6,
-      transition: { duration: 0.3 },
-    },
-    closed: {
-      rotate: 0,
-      y: 0,
-      transition: { duration: 0.3 },
-    },
+  const lineVariants = {
+    closed: { rotate: 0, y: 0 },
+    open: (custom: number) => ({
+      rotate: custom,
+      y: custom > 0 ? 6 : -6, // Moves lines up/down
+    }),
   };
 
   const middleLineVariants = {
-    open: {
-      opacity: 0,
-      transition: { duration: 0.3 },
-    },
-    closed: {
-      opacity: 1,
-      transition: { duration: 0.3 },
-    },
-  };
-
-  const bottomLineVariants = {
-    open: {
-      rotate: -45,
-      y: -6,
-      transition: { duration: 0.3 },
-    },
-    closed: {
-      rotate: 0,
-      y: 0,
-      transition: { duration: 0.3 },
-    },
+    closed: { opacity: 1 },
+    open: { opacity: 0 }, // Middle line disappears
   };
 
   return (
     <nav className="flex justify-between items-center py-4 px-8 bg-gray-900 text-white shadow-md">
       {/* Logo */}
       <div className="text-2xl font-bold">
-        <Link href="/" className="hover:text-blue-400 transition-colors">
-          Outsourcingcx
+        <Link href="/">
+          <OutsourcingCXIcon />
         </Link>
       </div>
 
@@ -75,18 +51,23 @@ const Navbar: React.FC = () => {
         >
           {/* Top line */}
           <motion.span
-            className="block w-8 h-1 bg-white"
-            variants={topLineVariants}
+            className="block w-8 h-1 bg-white origin-center"
+            variants={lineVariants}
+            custom={45} // Top line rotates 45 degrees
+            transition={{ duration: 0.3 }}
           />
           {/* Middle line */}
           <motion.span
-            className="block w-8 h-1 bg-white"
+            className="block w-8 h-1 bg-white origin-center"
             variants={middleLineVariants}
+            transition={{ duration: 0.3 }}
           />
           {/* Bottom line */}
           <motion.span
-            className="block w-8 h-1 bg-white"
-            variants={bottomLineVariants}
+            className="block w-8 h-1 bg-white origin-center"
+            variants={lineVariants}
+            custom={-45} // Bottom line rotates -45 degrees
+            transition={{ duration: 0.3 }}
           />
         </motion.div>
       </button>

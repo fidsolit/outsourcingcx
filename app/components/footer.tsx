@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import OutsourcingCXIcon from "./outsourcingicon";
 
 const Footer: React.FC = () => {
   return (
@@ -18,7 +19,8 @@ const Footer: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img src="/logo.svg" alt="Logo" className="h-8 w-8 mr-2" />
+          {/* <img src="/logo.svg" alt="Logo" className="h-8 w-8 mr-2" /> */}
+          <OutsourcingCXIcon />
           <span className="text-xl font-bold">Outsourcingcx</span>
         </motion.div>
 
