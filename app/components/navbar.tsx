@@ -125,7 +125,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contactus" },
 ];
 
 // Framer Motion Variants
