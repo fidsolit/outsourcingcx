@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const About: React.FC = () => {
   return (
     // <section className="relative overflow-hidden bg-gradient-to-b from-white via-gray-900 to-black text-gray-900 py-20 px-5 md:px-10 lg:px-20">
-    <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white py-20 px-5 md:px-10 lg:px-20">
+    <section className="relative overflow-hidden h-screen max-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white py-20 px-5 md:px-10  lg:px-20">
       {/* Fancy Background Animation */}
       <div className="absolute inset-0 opacity-20">
         <motion.div
