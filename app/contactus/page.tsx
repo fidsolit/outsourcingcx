@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto p-8 bg-gray-900 text-white rounded-lg shadow-lg"
+      className="max-w-4xl mx-auto p-8 max-h-screen md:my-10 bg-gray-900 text-white rounded-lg shadow-lg"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}

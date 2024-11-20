@@ -7,7 +7,7 @@ import OutsourcingCXIcon from "./outsourcingicon";
 const Footer: React.FC = () => {
   return (
     <motion.footer
-      className="bg-gray-900 text-white py-8 px-4"
+      className="bg-gray-900 text-white  py-8 px-4"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
