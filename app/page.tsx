@@ -14,13 +14,13 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Image
+          {/* <Image
             src="/images/oldcustomers.png"
             alt="Customer Experience Illustration"
             width={800}
             height={400}
             className="mx-auto rounded-lg shadow-lg"
-          />
+          /> */}
         </motion.div>
         <motion.h1
           className="text-5xl font-bold mb-4"
