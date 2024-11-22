@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
       <motion.ul
         className={`${
           isOpen ? "flex" : "hidden"
-        } flex-col md:flex md:flex-row md:space-x-8 list-none absolute md:static top-16 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent p-4 md:p-0`}
+        } flex-col md:flex md:flex-row md:space-x-8 list-none absolute md:static top-16 left-0 z-50 w-full md:w-auto bg-gray-900 md:bg-transparent p-4 md:p-0`}
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -91,6 +91,7 @@ const Navbar: React.FC = () => {
           >
             <Link
               href={item.href}
+              onClick={() => setIsOpen(!isOpen)}
               className="hover:text-blue-400 transition-colors block py-2 md:py-0"
             >
               {item.name}
