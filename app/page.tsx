@@ -44,6 +44,9 @@ export default function Home() {
             className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             Get Started
           </motion.button>
@@ -52,7 +55,14 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl font-bold text-center mb-8"
+        >
+          Our Services
+        </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
